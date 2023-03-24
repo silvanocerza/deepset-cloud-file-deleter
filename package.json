@@ -1,0 +1,48 @@
+{
+  "name": "deepset-cloud-file-deleter",
+  "version": "1.0.2",
+  "private": false,
+  "description": "Delete files from deepset Cloud using GitHub Actions.",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write '**/*.ts'",
+    "format-check": "prettier --check '**/*.ts'",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build --source-map --license licenses.txt",
+    "test": "jest",
+    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvanocerza/deepset-cloud-file-deleter.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup",
+    "deepset",
+    "haystack"
+  ],
+  "author": "Silvano Cerza",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "api": "^5.0.7",
+    "yaml": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.15.1",
+    "@typescript-eslint/parser": "5.54.1",
+    "@vercel/ncc": "^0.36.1",
+    "eslint": "^8.36.0",
+    "eslint-plugin-github": "^4.6.1",
+    "eslint-plugin-jest": "^27.2.1",
+    "jest": "^29.5.0",
+    "js-yaml": "^4.1.0",
+    "prettier": "2.8.4",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.5"
+  }
+}

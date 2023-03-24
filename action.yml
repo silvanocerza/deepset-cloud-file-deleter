@@ -1,0 +1,16 @@
+name: 'deepset Cloud file deleter'
+description: 'Delete files from deepset Cloud using GitHub Actions.'
+author: 'Silvano Cerza'
+inputs:
+  api-key:
+    required: true
+    description: 'A valid deepset Cloud API Key'
+  workspace-name:
+    required: true
+    description: 'deepset Cloud Workspace name'
+  file:
+    required: true
+    description: 'File to delete from deepset Cloud'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
