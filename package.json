@@ -1,6 +1,6 @@
 {
   "name": "deepset-cloud-file-deleter",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "private": false,
   "description": "Delete files from deepset Cloud using GitHub Actions.",
   "main": "lib/main.js",
