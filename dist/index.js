@@ -113,7 +113,11 @@ function run() {
             const workspaceName = core.getInput('workspace-name');
             const apiKey = core.getInput('api-key');
             const file = core.getInput('file');
+            const safe = core.getBooleanInput('safe');
             const files = yield (0, delete_1.listFiles)(apiKey, workspaceName, file);
+            if (files.length > 1 && safe) {
+                core.setFailed(`Multiple files named ${file} found, it's not safe to proceed.`);
+            }
             for (const f of files) {
                 yield (0, delete_1.deleteFile)(apiKey, workspaceName, f.id);
                 core.info(`Deleted file named ${f.name} with ID: ${f.id}`);

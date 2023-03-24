@@ -11,6 +11,10 @@ inputs:
   file:
     required: true
     description: 'File to delete from deepset Cloud'
+  safe:
+    required: false
+    default: true
+    description: 'If true fails deletion fails if multiple files with the same name are found'
 runs:
   using: 'node16'
   main: 'dist/index.js'
